@@ -13,11 +13,13 @@
     "type-check": "tsc --project tsconfig.json --pretty --noEmit"
   },
   "dependencies": {
+    "autoprefixer": "^10.1.0",
     "next": "10.0.6",
+    "notion-client": "^4.2.11",
+    "postcss": "^8.1.7",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "autoprefixer": "^10.1.0",
-    "postcss": "^8.1.7",
+    "react-notion-x": "^4.2.16",
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
@@ -41,6 +43,7 @@
     "husky": "^4.3.8",
     "jest": "^26.6.3",
     "lint-staged": "^10.5.3",
+    "notion-types": "^4.0.0",
     "prettier": "^2.2.1",
     "typescript": "^4.1.3"
   }
