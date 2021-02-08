@@ -1,5 +1,22 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+# Notion as CMS example
+This repository serves a demonstration purpose only.
+It tests and demonstrates how to use [Notion.so](https://www.notion.so/) as a CMS for a [Next.js](https://nextjs.org/) Website.
+
+## Stack
+- Written in [TypeScript](https://www.typescriptlang.org/)
+- View library: [React](https://reactjs.org/)
+- Framework: [Next.js](https://nextjs.org/)
+- CMS: [Notion.so](https://www.notion.so/)
+- Renderer: [React Notion X](https://github.com/NotionX/react-notion-x)
+- Styling: [Tailwind CSS](https://tailwindcss.com/)
+- Testing: [Jest](https://jestjs.io/)
+- Code linting: [Eslint](https://eslint.org/)
+- Code formatting: [Prettier](https://github.com/prettier/prettier)
+- Commit conventions: [Commitizen](http://commitizen.github.io/cz-cli/)
+- Commit hooks: [Husky](https://typicode.github.io/husky/#/)
+
 ## Getting Started
 
 First, run the development server:
