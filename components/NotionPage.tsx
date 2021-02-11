@@ -11,6 +11,7 @@ import {
   CollectionRow,
 } from "react-notion-x";
 import { Header } from "./Header";
+import { Footer } from "./Footer";
 
 const Modal = dynamic(
   () => import("react-notion-x").then(notion => notion.Modal),
@@ -88,7 +89,6 @@ export const NotionPage: React.FC<PageProps> = ({ recordMap, error }) => {
 
           <title>{title}</title>
         </Head>
-
         <NotionRenderer
           components={{
             pageLink: PageLink,
@@ -101,6 +101,7 @@ export const NotionPage: React.FC<PageProps> = ({ recordMap, error }) => {
           showCollectionViewDropdown={false}
         />
       </div>
+      <Footer />
     </>
   );
 };
