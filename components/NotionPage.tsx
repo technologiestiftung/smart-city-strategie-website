@@ -4,13 +4,13 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import { ExtendedRecordMap } from "notion-types";
-// core notion renderer
 import {
   NotionRenderer,
   Code,
   Collection,
   CollectionRow,
 } from "react-notion-x";
+import { Header } from "./Header";
 
 const Modal = dynamic(
   () => import("react-notion-x").then(notion => notion.Modal),
@@ -79,25 +79,28 @@ export const NotionPage: React.FC<PageProps> = ({ recordMap, error }) => {
 
   const title = "Title";
   return (
-    <div className='container mx-auto max-w-screen-lg my-20'>
-      <Head>
-        <meta property='og:title' content={title} />
-        <meta name='twitter:title' content={title} />
+    <>
+      <Header />
+      <div className='container mx-auto max-w-screen-lg mb-20 mt-50'>
+        <Head>
+          <meta property='og:title' content={title} />
+          <meta name='twitter:title' content={title} />
 
-        <title>{title}</title>
-      </Head>
+          <title>{title}</title>
+        </Head>
 
-      <NotionRenderer
-        components={{
-          pageLink: PageLink,
-          code: Code,
-          collection: Collection,
-          collectionRow: CollectionRow,
-          modal: Modal,
-        }}
-        recordMap={recordMap}
-        showCollectionViewDropdown={false}
-      />
-    </div>
+        <NotionRenderer
+          components={{
+            pageLink: PageLink,
+            code: Code,
+            collection: Collection,
+            collectionRow: CollectionRow,
+            modal: Modal,
+          }}
+          recordMap={recordMap}
+          showCollectionViewDropdown={false}
+        />
+      </div>
+    </>
   );
 };
