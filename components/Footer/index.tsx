@@ -23,7 +23,7 @@ export const Footer: FC = () => (
           }}
         >
           <Image
-            src='/partner-logos/01_beBerlin.jpg'
+            src='/01_beBerlin_pdnnnt.jpg'
             alt='Logo Berlin'
             width='78'
             height='19'
@@ -32,7 +32,7 @@ export const Footer: FC = () => (
         </div>
         <div className='inline-flex border-l border-gray-300 pl-4'>
           <Image
-            src='/partner-logos/02_RBm_SKzl-01.png'
+            src='/02_RBm_SKzl-01_i4zgwy.png'
             alt='Logo Berlin Regierende Buergermeister von Berlin'
             width='78'
             height='46'
@@ -41,7 +41,7 @@ export const Footer: FC = () => (
         </div>
         <div className='inline-flex border-l border-gray-300 pl-4'>
           <Image
-            src='/partner-logos/03_sen_wienbe_logo-01.png'
+            src='/03_sen_wienbe_logo-01_ctse97.png'
             alt='Logo Berlin Senatsverwaltung fuer Wirtschaft, Energie und Betriebe'
             width='78'
             height='53'
@@ -50,7 +50,7 @@ export const Footer: FC = () => (
         </div>
         <div className='inline-flex border-l border-gray-300 pl-4'>
           <Image
-            src='/partner-logos/eu-logo.png'
+            src='/eu-logo_wqrkgx.png'
             alt='Logo Europaeische Union - Fonds fuer regionaler Entwicklung'
             width='119'
             height='33'

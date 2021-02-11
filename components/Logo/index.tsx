@@ -9,7 +9,7 @@ export const Logo: FC = () => (
   >
     <Image
       alt='Smart City Berlin logo'
-      src='/logo.svg'
+      src='/logo_j8yjjs.svg'
       width='265px'
       height='88px'
       objectFit='contain'

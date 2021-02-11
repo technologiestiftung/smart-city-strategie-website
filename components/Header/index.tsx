@@ -11,11 +11,12 @@ export const Header: FC = () => (
     </div>
     <div className='mb-20' style={{ marginTop: 160 }}>
       <Image
-        src='/header-cover.jpg'
+        src='/smart-city-header-cover_zn34yh.jpg'
         width='1920'
         height='680'
         layout='responsive'
         objectFit='cover'
+        quality='60'
       />
     </div>
   </>
