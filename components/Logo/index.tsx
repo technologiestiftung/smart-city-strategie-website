@@ -1,4 +1,5 @@
 import { FC } from "react";
+import Image from "next/image";
 
 export const Logo: FC = () => (
   <a
@@ -6,6 +7,12 @@ export const Logo: FC = () => (
     title='Mit Ihnen machen wir Berlin zur Smart City!'
     className='inline-block opacity-1 transition-opacity hover:opacity-50'
   >
-    <img alt='Smart City Berlin logo' src='/logo.svg' />
+    <Image
+      alt='Smart City Berlin logo'
+      src='/logo.svg'
+      width='265px'
+      height='88px'
+      objectFit='contain'
+    />
   </a>
 );
