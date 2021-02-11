@@ -8,9 +8,9 @@ const notion = new NotionAPI();
 export const getStaticProps = async (): Promise<{
   props: {
     recordMap: ExtendedRecordMap;
-  }
+  };
 }> => {
-  const recordMap = await notion.getPage("db31dff4705d4a73894a83971aad95f4");
+  const recordMap = await notion.getPage("bec3fb01ae3b4d33bd2c1582fc1eb06f");
   return { props: { recordMap } };
 };
 

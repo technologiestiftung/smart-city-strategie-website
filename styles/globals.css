@@ -1,3 +1,80 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  @font-face {
+    font-family: 'Klavika';
+	font-style: normal;
+	font-weight: normal;
+	font-display: auto;
+    src: url('/fonts/klavika/Klavika-Regular.eot'); /* IE9 Compat Modes */
+    src: url('/fonts/klavika/Klavika-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/fonts/klavika/Klavika-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/fonts/klavika/Klavika-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+         url('/fonts/klavika/Klavika-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+  }
+
+  @font-face {
+    font-family: 'Klavika';
+	font-style: normal;
+	font-weight: 300;
+	font-display: auto;
+    src: url('/fonts/klavika/Klavika-Light.eot'); /* IE9 Compat Modes */
+    src: url('/fonts/klavika/Klavika-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/fonts/klavika/Klavika-Light.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/fonts/klavika/Klavika-Light.woff') format('woff'), /* Pretty Modern Browsers */
+         url('/fonts/klavika/Klavika-Light.ttf')  format('truetype'); /* Safari, Android, iOS */
+  }
+
+  @font-face {
+    font-family: 'Klavika';
+	font-style: italic;
+	font-weight: 300;
+	font-display: auto;
+    src: url('/fonts/klavika/Klavika-LightItalic.eot'); /* IE9 Compat Modes */
+    src: url('/fonts/klavika/Klavika-LightItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/fonts/klavika/Klavika-LightItalic.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/fonts/klavika/Klavika-LightItalic.woff') format('woff'), /* Pretty Modern Browsers */
+         url('/fonts/klavika/Klavika-LightItalic.ttf')  format('truetype'); /* Safari, Android, iOS */
+  }
+
+  @font-face {
+    font-family: 'Klavika';
+	font-style: normal;
+	font-weight: bold;
+	font-display: auto;
+    src: url('/fonts/klavika/Klavika-Bold.eot'); /* IE9 Compat Modes */
+    src: url('/fonts/klavika/Klavika-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/fonts/klavika/Klavika-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/fonts/klavika/Klavika-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+         url('/fonts/klavika/Klavika-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+  }
+
+  @font-face {
+    font-family: 'Klavika';
+	font-style: italic;
+	font-weight: bold;
+	font-display: auto;
+    src: url('/fonts/klavika/Klavika-BoldItalic.eot'); /* IE9 Compat Modes */
+    src: url('/fonts/klavika/Klavika-BoldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/fonts/klavika/Klavika-BoldItalic.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/fonts/klavika/Klavika-BoldItalic.woff') format('woff'), /* Pretty Modern Browsers */
+         url('/fonts/klavika/Klavika-BoldItalic.ttf')  format('truetype'); /* Safari, Android, iOS */
+  }
+
+  body,
+  .notion {
+	  @apply font-sans;
+  }
+
+  .notion-page-title-text {
+	  border: none;
+  }
+
+  .notion-page-title,
+  img.notion-page-icon,
+  svg.notion-page-icon {
+	  display: inline-block;
+  }
+}
+

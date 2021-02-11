@@ -73,12 +73,13 @@ export const NotionPage: React.FC<PageProps> = ({ recordMap, error }) => {
   const block = recordMap?.block?.[keys[0]]?.value;
 
   if (!recordMap || error || !keys.length || !block) {
-    return <div>Error ...</div>;
+    if (!block) return <div>Block not found</div>;
+    return <div>Error{error || ""}</div>;
   }
 
   const title = "Title";
   return (
-    <>
+    <div className='container mx-auto max-w-screen-lg my-20'>
       <Head>
         <meta property='og:title' content={title} />
         <meta name='twitter:title' content={title} />
@@ -97,6 +98,6 @@ export const NotionPage: React.FC<PageProps> = ({ recordMap, error }) => {
         recordMap={recordMap}
         showCollectionViewDropdown={false}
       />
-    </>
+    </div>
   );
 };
