@@ -5,7 +5,7 @@ import { Logo } from "@components/Logo";
 export const Header: FC = () => (
   <>
     <div className='fixed top-0 left-0 w-screen bg-white py-8 z-10'>
-      <div className='container mx-auto max-w-screen-lg z-10'>
+      <div className='px-4 container mx-auto max-w-screen-lg z-10'>
         <Logo />
       </div>
     </div>

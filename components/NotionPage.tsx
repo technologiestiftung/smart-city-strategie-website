@@ -82,7 +82,7 @@ export const NotionPage: React.FC<PageProps> = ({ recordMap, error }) => {
   return (
     <>
       <Header />
-      <div className='container mx-auto max-w-screen-lg mb-20 mt-50'>
+      <div className='px-4 container mx-auto max-w-screen-lg mb-20 mt-50'>
         <Head>
           <meta property='og:title' content={title} />
           <meta name='twitter:title' content={title} />

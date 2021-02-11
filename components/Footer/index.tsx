@@ -5,7 +5,7 @@ import { Logo } from "@components/Logo";
 const currentYear = new Date().getFullYear();
 
 export const Footer: FC = () => (
-  <div className='container py-8 mx-auto bg-white max-w-screen-lg'>
+  <div className='container px-8 py-8 mx-auto bg-white max-w-screen-lg'>
     <div
       className='grid items-center mt-8 border-b border-gray-300 items-stretch gap-8 py-8'
       style={{
