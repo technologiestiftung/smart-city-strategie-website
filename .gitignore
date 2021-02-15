@@ -41,3 +41,6 @@ yarn-error.log*
 # Import-JS
 .importjs.js
 
+
+# Local Netlify folder
+.netlify
