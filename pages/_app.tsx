@@ -1,4 +1,5 @@
 import { FC } from "react";
+import "react-notion-x/src/styles.css";
 import "../styles/globals.css";
 
 const App: FC<{
