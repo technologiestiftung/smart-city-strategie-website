@@ -69,6 +69,7 @@
 
   .notion-page-title-text {
 	  border: none;
+    white-space: normal;
   }
 
   .notion-page-title,
@@ -85,6 +86,14 @@
 
   .notion-viewport {
 	  display: none;
+  }
+
+  .notion-collection {
+  	max-width: 100%;
+  }
+
+  .img[src^='https://www.notion.so/image/https%3A%2F%2Fimg.icons8.com'] {
+    max-width: 80px;
   }
 }
 
