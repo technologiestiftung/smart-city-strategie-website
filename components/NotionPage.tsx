@@ -1,5 +1,4 @@
 import { FC } from "react";
-import Head from "next/head";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
@@ -12,6 +11,7 @@ import {
 } from "react-notion-x";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import Head from "./Head";
 
 const Modal = dynamic(
   () => import("react-notion-x").then(notion => notion.Modal),
@@ -78,17 +78,21 @@ export const NotionPage: React.FC<PageProps> = ({ recordMap, error }) => {
     return <div>Error{error || ""}</div>;
   }
 
-  const title = "Title";
   return (
     <>
       <Header />
       <div className='px-4 container mx-auto max-w-screen-lg mb-20 mt-50'>
-        <Head>
-          <meta property='og:title' content={title} />
-          <meta name='twitter:title' content={title} />
-
-          <title>{title}</title>
-        </Head>
+        <Head
+          description='Öffentlicher Wissensspeicher zur Entwicklung der Smart City Strategie'
+          locale='de'
+          locales={["de"]}
+          pageTitle='Smart City Strategie'
+          siteTitle='Smart City Berlin'
+          themeColor='#F7323E'
+          socialThumbnail='/social-thumbnail.png'
+          twitterUsername='@SmartBerlin'
+          currentPagePath='/'
+        />
         <NotionRenderer
           components={{
             pageLink: PageLink,
