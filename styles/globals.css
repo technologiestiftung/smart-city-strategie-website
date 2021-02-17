@@ -62,6 +62,7 @@
          url('/fonts/klavika/Klavika-BoldItalic.ttf')  format('truetype'); /* Safari, Android, iOS */
   }
 
+  /* purgecss start ignore */
   body,
   .notion {
 	  @apply font-sans;
@@ -96,5 +97,6 @@
   .img[src^='https://www.notion.so/image/https%3A%2F%2Fimg.icons8.com'] {
     max-width: 80px;
   }
+  /* purgecss end ignore */
 }
 
