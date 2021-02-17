@@ -68,9 +68,12 @@
 	  @apply font-sans;
   }
 
-  .notion-page-title-text {
-	  border: none;
+  .notion-page-title-text,
+  .notion-page-title,
+  .notion-link {
+	  border-bottom: 0;
     white-space: normal;
+    text-decoration: underline;
   }
 
   .notion-page-title,
@@ -90,6 +93,26 @@
       font-size: 32px;
       line-height: 40px;
     }
+  }
+
+  .notion-page-link {
+    height: auto;
+    min-height: 30px;
+  }
+
+  .notion-page-title {
+    padding: 4px 0 0 30px;
+    position: relative;
+  }
+
+  .notion-page-title img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .notion-list-body .notion-list-item {
+    margin-bottom: 8px;
   }
 
   .notion-viewport {
