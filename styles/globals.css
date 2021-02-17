@@ -86,6 +86,7 @@
 
   .notion-viewport {
 	  display: none;
+    pointer-events: none;
   }
 
   .notion-collection {
