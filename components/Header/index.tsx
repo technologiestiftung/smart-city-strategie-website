@@ -5,7 +5,7 @@ import { Logo } from "@components/Logo";
 export const Header: FC = () => (
   <>
     <div className='absolute sm:fixed top-0 left-0 w-screen bg-white py-4 md:py-6 z-10 shadow-sm'>
-      <div className='px-4 container mx-auto max-w-screen-lg z-10 sm:flex items-center sm:space-between gap-8'>
+      <div className='px-4 container mx-auto max-w-screen-lg z-10 sm:flex items-center sm:justify-between gap-8'>
         <Logo />
         <h2 className='sm:inline-block pl-28 sm:pl-0 pb-4 sm:pb-1 text-2xl sm:text-3xl sm:leading-7 leading-6'>
           Öffentlicher
