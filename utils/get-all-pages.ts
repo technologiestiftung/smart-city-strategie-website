@@ -5,6 +5,7 @@ import * as types from "./types";
 import { includeNotionIdInUrls } from "./config";
 import { notion } from "./notion";
 import { getCanonicalPageId } from "./get-canonical-page-id";
+import { ExtendedRecordMap, PageMap } from "notion-types";
 
 const uuid = !!includeNotionIdInUrls;
 
@@ -22,7 +23,7 @@ export async function getAllPagesImpl(
 
   const canonicalPageMap = Object.keys(pageMap).reduce(
     (map, pageId: string) => {
-      const recordMap = pageMap[pageId];
+      const recordMap = pageMap[pageId] as ExtendedRecordMap;
       if (!recordMap) {
         throw new Error(`Error loading page "${pageId}"`);
       }
@@ -54,7 +55,7 @@ export async function getAllPagesImpl(
   );
 
   return {
-    pageMap,
+    pageMap: pageMap as PageMap,
     canonicalPageMap,
   };
 }

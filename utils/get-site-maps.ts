@@ -24,6 +24,7 @@ export async function getSiteMaps(): Promise<types.SiteMap[]> {
         } as types.SiteMap;
       } catch (err) {
         console.warn("site build error", index, site, err);
+        return undefined;
       }
     },
     {

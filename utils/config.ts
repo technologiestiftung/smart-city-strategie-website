@@ -138,9 +138,14 @@ export const firebaseCollectionImages = getEnv(
 
 // this hack is necessary because vercel doesn't support secret files so we need to encode our google
 // credentials a base64-encoded string of the JSON-ified content
-function getGoogleApplicationCredentials(): string | null {
+function getGoogleApplicationCredentials():
+  | {
+      client_email?: string | undefined;
+      private_key?: string | undefined;
+    }
+  | undefined {
   if (!isPreviewImageSupportEnabled || !isServer) {
-    return null;
+    return undefined;
   }
 
   try {
