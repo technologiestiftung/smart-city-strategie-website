@@ -79,13 +79,6 @@ export const utterancesGitHubRepo: string | null = getSiteConfig(
 // Optional image CDN host to proxy all image requests through
 export const imageCDNHost: string | null = getSiteConfig("imageCDNHost", null);
 
-// Optional whether or not to enable support for LQIP preview images
-// (requires a Google Firebase collection)
-export const isPreviewImageSupportEnabled: boolean = getSiteConfig(
-  "isPreviewImageSupportEnabled",
-  false
-);
-
 export const isDev =
   process.env.NODE_ENV === "development" || !process.env.NODE_ENV;
 
@@ -105,10 +98,7 @@ export const host = isDev ? `http://localhost:${port}` : `https://${domain}`;
 export const apiBaseUrl = `${host}/api`;
 
 export const api = {
-  createPreviewImage: `${apiBaseUrl}/create-preview-image`,
   searchNotion: `${apiBaseUrl}/search-notion`,
-  renderSocialImage: (pageId: string): string =>
-    `${apiBaseUrl}/render-social-image/${pageId}`,
 };
 
 // ----------------------------------------------------------------------------
@@ -120,51 +110,6 @@ export const fathomConfig = fathomId
       excludedDomains: ["localhost", "localhost:3000"],
     }
   : undefined;
-
-const defaultEnvValueForPreviewImageSupport =
-  isPreviewImageSupportEnabled && isServer ? undefined : null;
-
-export const googleProjectId = getEnv(
-  "GCLOUD_PROJECT",
-  `${defaultEnvValueForPreviewImageSupport}`
-);
-
-export const googleApplicationCredentials = getGoogleApplicationCredentials();
-
-export const firebaseCollectionImages = getEnv(
-  "FIREBASE_COLLECTION_IMAGES",
-  `${defaultEnvValueForPreviewImageSupport}`
-);
-
-// this hack is necessary because vercel doesn't support secret files so we need to encode our google
-// credentials a base64-encoded string of the JSON-ified content
-function getGoogleApplicationCredentials():
-  | {
-      client_email?: string | undefined;
-      private_key?: string | undefined;
-    }
-  | undefined {
-  if (!isPreviewImageSupportEnabled || !isServer) {
-    return undefined;
-  }
-
-  try {
-    const googleApplicationCredentialsBase64 = getEnv(
-      "GOOGLE_APPLICATION_CREDENTIALS",
-      `${defaultEnvValueForPreviewImageSupport}`
-    );
-
-    return JSON.parse(
-      Buffer.from(googleApplicationCredentialsBase64, "base64").toString()
-    );
-  } catch (err) {
-    console.error(
-      'Firebase config error: invalid "GOOGLE_APPLICATION_CREDENTIALS" should be base64-encoded JSON\n'
-    );
-
-    throw err;
-  }
-}
 
 function cleanPageUrlMap(
   pageUrlMap: PageUrlOverridesMap,

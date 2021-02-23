@@ -33,7 +33,6 @@ export interface Site extends Model {
   html?: string;
   fontFamily?: string;
   darkMode?: boolean;
-  previewImages?: boolean;
 
   // opengraph metadata
   description?: string;
@@ -64,21 +63,4 @@ export interface PageUrlOverridesInverseMap {
   // maps from a notion page id to the URL path the page should be resolved to
   // (this overrides the built-in URL path generation for these pages)
   [pageId: string]: string;
-}
-
-export interface PreviewImage {
-  url: string;
-  originalWidth: number;
-  originalHeight: number;
-  width: number;
-  height: number;
-  type: string;
-  dataURIBase64: string;
-
-  error?: string;
-  statusCode?: number;
-}
-
-export interface PreviewImageMap {
-  [url: string]: PreviewImage;
 }
