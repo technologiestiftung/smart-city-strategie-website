@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Image from "next/image";
-import { Logo } from "@components/Logo";
+import { SmartCityLogo } from "@components/SmartCityLogo";
 
 const currentYear = new Date().getFullYear();
 
@@ -14,7 +14,7 @@ export const Footer: FC = () => (
         }}
       >
         <div className='inline-flex' style={{ maxWidth: 220 }}>
-          <Logo />
+          <SmartCityLogo />
         </div>
         <div
           className='inline-flex border-l border-gray-300 pl-4'
