@@ -41,6 +41,7 @@
     "react-icons": "4.1.0",
     "react-notion-x": "4.2.21",
     "react-static-tweets": "0.2.6",
+    "react-tweet-embed": "1.2.2",
     "react-use": "15.3.3",
     "static-tweets": "0.2.7",
     "tailwindcss": "2.0.2",
