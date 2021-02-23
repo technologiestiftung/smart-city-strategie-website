@@ -1,21 +1,26 @@
-import { FC } from "react";
-import { NotionAPI } from "notion-client";
-import { ExtendedRecordMap } from "notion-types";
+import React, { FC } from "react";
+import { domain } from "@utils/config";
+import { resolveNotionPage } from "@utils/resolve-notion-page";
 import { NotionPage } from "@components/NotionPage";
-
-const notion = new NotionAPI();
+import { PageProps } from "@utils/types";
 
 export const getStaticProps = async (): Promise<{
-  props: {
-    recordMap: ExtendedRecordMap;
+  props?: Record<string, unknown>;
+  revalidate?: number;
+  redirect?: {
+    destination: string;
   };
 }> => {
-  const recordMap = await notion.getPage("bec3fb01ae3b4d33bd2c1582fc1eb06f");
-  return { props: { recordMap } };
+  try {
+    const props = await resolveNotionPage(domain);
+
+    return { props, revalidate: 10 };
+  } catch (err) {
+    console.error("page error", domain, err);
+    throw err;
+  }
 };
 
-const Homepage: FC<{ recordMap: ExtendedRecordMap }> = ({ recordMap }) => (
-  <NotionPage recordMap={recordMap} />
-);
+const NotionDomainPage: FC<PageProps> = props => <NotionPage {...props} />;
 
-export default Homepage;
+export default NotionDomainPage;

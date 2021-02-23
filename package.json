@@ -18,6 +18,7 @@
     "next": "10.0.6",
     "next-on-netlify": "^2.8.7",
     "notion-client": "^4.2.11",
+    "p-memoize": "^4.0.1",
     "postcss": "^8.1.7",
     "react": "17.0.1",
     "react-dom": "17.0.1",

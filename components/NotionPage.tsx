@@ -103,6 +103,7 @@ export const NotionPage: React.FC<PageProps> = ({ recordMap, error }) => {
           }}
           recordMap={recordMap}
           showCollectionViewDropdown={false}
+          rootPageId='bec3fb01ae3b4d33bd2c1582fc1eb06f'
         />
       </div>
       <Footer />
