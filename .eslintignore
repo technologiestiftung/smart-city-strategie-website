@@ -1,4 +1,6 @@
 out
+out_publish
+out_functions
 *.config.js
 *.setup.js
 .*.js

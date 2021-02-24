@@ -94,9 +94,7 @@ export const host = isDev ? `http://localhost:${port}` : `https://${domain}`;
 
 export const apiBaseUrl = `${host}/api`;
 
-export const api = {
-  searchNotion: `${apiBaseUrl}/search-notion`,
-};
+export const api = {};
 
 // ----------------------------------------------------------------------------
 
