@@ -14,7 +14,6 @@ export const getServerSideProps = async (
   context: ContextType
 ): Promise<{
   props?: PageProps;
-  revalidate?: number;
   redirect?: {
     destination: string;
   };
@@ -32,7 +31,7 @@ export const getServerSideProps = async (
 
     const props = await resolveNotionPage(domain, rawPageId);
 
-    return { props, revalidate: 10 };
+    return { props };
   } catch (err) {
     console.error("page error", domain, rawPageId, err);
 
