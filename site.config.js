@@ -21,9 +21,6 @@ module.exports = {
   // NOTE: this requires you to set up an external image proxy
   imageCDNHost: null,
 
-  // Utteranc.es comments via GitHub issue comments (optional)
-  utterancesGitHubRepo: null,
-
   // map of notion page IDs to URL paths (optional)
   // any pages defined here will override their default URL paths
   // example:

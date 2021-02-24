@@ -3,4 +3,3 @@
 
 declare module "*.css";
 declare module "*.module.css";
-declare module "puppeteer-social-image-transitive-bs";

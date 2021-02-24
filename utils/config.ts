@@ -40,7 +40,10 @@ export const pageUrlAdditions = cleanPageUrlMap(
 export const name: string = getSiteConfig("name");
 export const author: string = getSiteConfig("author");
 export const domain: string = getSiteConfig("domain");
-export const description: string = getSiteConfig("description", "Notion Blog");
+export const description: string = getSiteConfig(
+  "description",
+  "Smart City Strategieprozess"
+);
 
 // social accounts
 export const twitter: string | null = getSiteConfig("twitter", null);
@@ -70,12 +73,6 @@ export const defaultPageCoverPosition: number = getSiteConfig(
   0.5
 );
 
-// Optional utteranc.es comments via GitHub issue comments
-export const utterancesGitHubRepo: string | null = getSiteConfig(
-  "utterancesGitHubRepo",
-  null
-);
-
 // Optional image CDN host to proxy all image requests through
 export const imageCDNHost: string | null = getSiteConfig("imageCDNHost", null);
 
@@ -102,14 +99,6 @@ export const api = {
 };
 
 // ----------------------------------------------------------------------------
-
-export const fathomId = isDev ? null : process.env.NEXT_PUBLIC_FATHOM_ID;
-
-export const fathomConfig = fathomId
-  ? {
-      excludedDomains: ["localhost", "localhost:3000"],
-    }
-  : undefined;
 
 function cleanPageUrlMap(
   pageUrlMap: PageUrlOverridesMap,
