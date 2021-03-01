@@ -3,13 +3,13 @@ import { useRouter } from "next/router";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 
-export const Layout: FC = ({ children }) => {
+export const Layout: FC<{ title?: string }> = ({ children, title }) => {
   const router = useRouter();
   const isHome = router.pathname === "/";
 
   return (
     <>
-      <Header />
+      <Header title={title} />
       <div
         className={[
           "px-4 container mx-auto max-w-screen-lg mb-20",

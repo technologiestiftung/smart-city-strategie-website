@@ -14,6 +14,7 @@ import { CustomHtml } from "./CustomHtml";
 import { Page404 } from "./Page404";
 import { Layout } from "./Layout";
 import { LoadingIcon } from "./LoadingIcon";
+import { getBlockTitle } from "notion-utils";
 
 const Modal = dynamic(
   () => import("react-notion-x").then(notion => notion.Modal),
@@ -83,13 +84,15 @@ export const NotionPage: React.FC<PageProps> = ({
     );
   }
 
+  const title = getBlockTitle(block, recordMap) || site.name;
+
   return (
-    <Layout>
+    <Layout title={title}>
       <Head
         description='Öffentlicher Wissensspeicher zur Entwicklung der Smart City Strategie'
         locale='de'
         locales={["de"]}
-        pageTitle='Smart City Strategie'
+        pageTitle={title || "Smart City Strategie"}
         siteTitle='Smart City Berlin'
         themeColor='#F7323E'
         socialThumbnail='/social-thumbnail.png'

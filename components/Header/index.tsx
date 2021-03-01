@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { SmartCityStrategieLogo } from "@components/SmartCityStrategieLogo";
 import { SmartCityLogo } from "@components/SmartCityLogo";
 
-export const Header: FC = () => {
+export const Header: FC<{ title?: string }> = ({ title = "" }) => {
   const router = useRouter();
   const isHome = router.pathname === "/";
 
@@ -28,11 +28,7 @@ export const Header: FC = () => {
             Wissensspeicher
           </h2>
 
-          <a
-            href='https://smart-city-berlin.de/strategie'
-            title='Mit Ihnen machen wir Berlin zur Smart City!'
-            target='_blank'
-            rel='noreferrer'
+          <span
             className={[
               "justify-self-end inline-grid grid-cols-1",
               "underline text-gray-500 hover:text-gray-800 transition-colors",
@@ -41,7 +37,7 @@ export const Header: FC = () => {
             <div className='sm:w-40 pt-2'>
               <SmartCityLogo />
             </div>
-          </a>
+          </span>
         </div>
       </div>
       <div className='mt-24 sm:mt-32'>
@@ -61,11 +57,20 @@ export const Header: FC = () => {
           className='sm:fixed w-screen bg-white bg-opacity-90'
           style={{ zIndex: 99 }}
         >
-          <nav className='px-6 pt-8 pb-4 border-b border-gray-200 container mx-auto max-w-screen-lg z-10 items-center gap-8'>
-            <button className='cursor-pointer' onClick={() => router.back()}>
+          <nav
+            className='border-b border-gray-200 container mx-auto max-w-screen-lg z-10 grid pt-2'
+            style={{ gridTemplateColumns: "auto 1fr" }}
+          >
+            <button
+              className='cursor-pointer pt-4 pb-4 px-6 focus:outline-none focus:ring-inset focus:ring-2 focus:ring-red-400 rounded'
+              onClick={() => router.back()}
+            >
               <span className='text-gray-300'>←</span>{" "}
               <span className='border-b border-gray-300'>Zurück</span>
             </button>
+            <h1 className='text-xl px-6 pt-4 pb-4 border-l border-gray-200 truncate'>
+              {title}
+            </h1>
           </nav>
         </div>
       )}
