@@ -40,16 +40,30 @@ export const Header: FC<{ title?: string }> = ({ title = "" }) => {
           </span>
         </div>
       </div>
-      <div className='mt-24 sm:mt-32'>
+      <div className='relative mt-24 sm:mt-32'>
         {isHome && (
-          <Image
-            src='/smart-city-header-cover_zn34yh.jpg'
-            width='1920'
-            height='680'
-            layout='responsive'
-            objectFit='cover'
-            quality='60'
-          />
+          <>
+            <Image
+              src='/smart-city-header-cover_zn34yh.jpg'
+              width='1920'
+              height='680'
+              layout='responsive'
+              objectFit='cover'
+              quality='60'
+            />
+            <div
+              className='absolute bottom-0 left-0 w-screen py-12 text-white h-2/4 grid content-end'
+              style={{
+                background:
+                  "linear-gradient(0deg, rgba(229,99,124,.5) 0%, transparent 100%)",
+                mixBlendMode: "screen",
+              }}
+            >
+              <h1 className='px-4 container mx-auto max-w-screen-lg text-7xl'>
+                {title}
+              </h1>
+            </div>
+          </>
         )}
       </div>
       {!isHome && (

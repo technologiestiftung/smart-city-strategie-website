@@ -84,14 +84,14 @@
 
   .notion > div:nth-child(2) > b {
 	  @apply mb-20 font-normal text-black;
-	  font-size: 50px;
-	  line-height: 64px;
+	  font-size: 40px;
+	  line-height: 48px;
   }
 
   @media (max-width: 768px) {
     .notion > div:nth-child(2) > b {
-      font-size: 32px;
-      line-height: 40px;
+      font-size: 24px;
+      line-height: 32px;
     }
   }
 
