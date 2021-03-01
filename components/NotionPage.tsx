@@ -18,6 +18,11 @@ const Modal = dynamic(
   { ssr: false }
 );
 
+const Pdf = dynamic(async () => {
+  const notion = await import("react-notion-x");
+  return notion.Pdf;
+});
+
 interface PageError {
   message?: string;
   statusCode: number;
@@ -100,6 +105,7 @@ export const NotionPage: React.FC<PageProps> = ({ recordMap, error }) => {
             collection: Collection,
             collectionRow: CollectionRow,
             modal: Modal,
+            pdf: Pdf,
           }}
           recordMap={recordMap}
           showCollectionViewDropdown={false}
