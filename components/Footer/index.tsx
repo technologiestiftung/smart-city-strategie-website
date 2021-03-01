@@ -1,6 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
 import { SmartCityLogo } from "@components/SmartCityLogo";
+import { CityLabLogo } from "@components/CityLabLogo";
 
 const currentYear = new Date().getFullYear();
 
@@ -57,20 +58,25 @@ export const Footer: FC = () => (
             objectFit='contain'
           />
         </div>
+        <div className='inline-flex border-l border-gray-300 pl-4 items-center'>
+          <a href='https://www.citylab-berlin.org/'>
+            <CityLabLogo />
+          </a>
+        </div>
       </div>
     </div>
     <div className='flex justify-items-center mt-4'>
       <div className='inline-flex gap-4 justify-items-center mx-auto uppercase flex-wrap'>
-        <span>© {currentYear} - SMART CITY BERLIN</span>
+        <span>© {currentYear} - CityLAB</span>
         <a
-          href='https://smart-city-berlin.de/service/impressum'
+          href='https://www.citylab-berlin.org/legalnote'
           title='Smart City Impressum'
           className='pl-4 border-l border-black hover:text-red-500 transition-colors'
         >
           Impressum
         </a>
         <a
-          href='https://smart-city-berlin.de/service/datenschutzerklaerung'
+          href='https://www.citylab-berlin.org/dataprivacy'
           title='Smart City Datenschutzrichtlinien'
           className='pl-4 border-l border-black hover:text-red-500 transition-colors'
         >
