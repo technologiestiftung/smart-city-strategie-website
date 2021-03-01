@@ -5,7 +5,10 @@ import { SmartCityLogo } from "@components/SmartCityLogo";
 
 export const Header: FC = () => (
   <>
-    <div className='absolute sm:fixed top-0 left-0 w-screen bg-white py-4 md:py-6 z-10 shadow-sm'>
+    <div
+      className='absolute sm:fixed top-0 left-0 w-screen bg-white py-4 md:py-6 shadow-sm'
+      style={{ zIndex: 100 }}
+    >
       <div
         className={[
           "px-4 container mx-auto max-w-screen-lg z-10 items-center gap-8",

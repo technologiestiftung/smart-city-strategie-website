@@ -83,7 +83,7 @@
   }
 
   .notion > div:nth-child(2) > b {
-	  @apply mb-20 font-normal text-black; 
+	  @apply mb-20 font-normal text-black;
 	  font-size: 50px;
 	  line-height: 64px;
   }
@@ -122,6 +122,17 @@
 
   .notion-collection {
   	max-width: 100%;
+    --notion-max-width: 100%;
+  }
+
+  .notion-table-view,
+  .notion-collection-header {
+    padding: 0 !important;
+  }
+
+  .notion-table {
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   img[src^='https://www.notion.so/image/https%3A%2F%2Fimg.icons8.com'] {
