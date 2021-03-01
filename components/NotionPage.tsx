@@ -13,6 +13,7 @@ import Head from "./Head";
 import { CustomHtml } from "./CustomHtml";
 import { Page404 } from "./Page404";
 import { Layout } from "./Layout";
+import { LoadingIcon } from "./LoadingIcon";
 
 const Modal = dynamic(
   () => import("react-notion-x").then(notion => notion.Modal),
@@ -68,7 +69,7 @@ export const NotionPage: React.FC<PageProps> = ({
   const router = useRouter();
 
   if (router.isFallback) {
-    return <div>loading ...</div>;
+    return <LoadingIcon />;
   }
 
   const keys = Object.keys(recordMap?.block || {});

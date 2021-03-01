@@ -1,5 +1,4 @@
 import * as React from "react";
-import styles from "./styles.module.css";
 
 export const LoadingIcon: React.FC<{
   className?: string;
@@ -7,7 +6,7 @@ export const LoadingIcon: React.FC<{
   const { className = "", ...rest } = props;
   return (
     <svg
-      className={`${styles.loadingIcon} ${className}`}
+      className={`w-4 h-4 text-gray-800 block animate-spin ${className}`}
       {...rest}
       viewBox='0 0 24 24'
     >
