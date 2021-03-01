@@ -38,16 +38,13 @@ export const Header: FC = () => {
               "underline text-gray-500 hover:text-gray-800 transition-colors",
             ].join(" ")}
           >
-            <div className='sm:w-40'>
+            <div className='sm:w-40 pt-2'>
               <SmartCityLogo />
             </div>
-            <span className='hidden sm:inline-block'>
-              Zur Smart City Berlin Hauptseite ↗
-            </span>
           </a>
         </div>
       </div>
-      <div className='mt-20 sm:mt-32'>
+      <div className='mt-24 sm:mt-32'>
         {isHome && (
           <Image
             src='/smart-city-header-cover_zn34yh.jpg'
@@ -59,6 +56,19 @@ export const Header: FC = () => {
           />
         )}
       </div>
+      {!isHome && (
+        <div
+          className='sm:fixed w-screen bg-white bg-opacity-90'
+          style={{ zIndex: 99 }}
+        >
+          <nav className='px-6 pt-8 pb-4 border-b border-gray-200 container mx-auto max-w-screen-lg z-10 items-center gap-8'>
+            <button className='cursor-pointer' onClick={() => router.back()}>
+              <span className='text-gray-300'>←</span>{" "}
+              <span className='border-b border-gray-300'>Zurück</span>
+            </button>
+          </nav>
+        </div>
+      )}
     </>
   );
 };
