@@ -1,17 +1,13 @@
-import Head from "next/head";
 import * as React from "react";
+import Link from "next/link";
 import * as types from "@utils/types";
-import { PageHead } from "./PageHead";
-
-import styles from "./styles.module.css";
+import Head from "./Head";
 
 export const Page404: React.FC<types.PageProps> = ({ site, pageId, error }) => {
-  const title = site?.name || "Notion Page Not Found";
+  const title = site?.name || "Page Not Found";
 
   return (
     <>
-      <PageHead site={site} />
-
       <Head>
         <meta property='og:site_name' content={title} />
         <meta property='og:title' content={title} />
@@ -19,27 +15,30 @@ export const Page404: React.FC<types.PageProps> = ({ site, pageId, error }) => {
         <title>{title}</title>
       </Head>
 
-      <div className={styles.container}>
-        <main className={styles.main}>
-          <h1>Notion Page Not Found</h1>
+      <div
+        className='max-w-xl mx-auto grid place-content-center'
+        style={{ minHeight: "calc(100vh - 500px)" }}
+      >
+        <h1 className='font-bold text-2xl mb-4'>
+          Diese Seite wurde nicht gefunden oder existiert nicht
+        </h1>
 
-          {error ? (
-            <p>{error.message}</p>
-          ) : (
-            pageId && (
-              <p>
-                Make sure that Notion page &quot;{pageId}&quot; is publicly
-                accessible.
-              </p>
-            )
-          )}
+        {error ? (
+          <pre className='px-4 py-3 rounded text-gray-600 max-w-full border border-gray-400 bg-gray-100 break-all whitespace-pre-wrap'>
+            {error.message}
+          </pre>
+        ) : (
+          pageId && (
+            <p>
+              Stellen Sie sicher, dass die Seite mit id &quot;{pageId}&quot;
+              veröffentlicht ist.
+            </p>
+          )
+        )}
 
-          <img
-            src='/404.png'
-            alt='404 Not Found'
-            className={styles.errorImage}
-          />
-        </main>
+        <Link href='/'>
+          <a className='underline block mt-6'>Zur Startseite</a>
+        </Link>
       </div>
     </>
   );

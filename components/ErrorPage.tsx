@@ -1,16 +1,12 @@
 import React from "react";
-import Head from "next/head";
-import { PageHead } from "./PageHead";
-
-import styles from "./styles.module.css";
+import Link from "next/link";
+import Head from "./Head";
 
 export const ErrorPage: React.FC<{ statusCode: number }> = ({ statusCode }) => {
   const title = "Error";
 
   return (
     <>
-      <PageHead />
-
       <Head>
         <meta property='og:site_name' content={title} />
         <meta property='og:title' content={title} />
@@ -18,14 +14,23 @@ export const ErrorPage: React.FC<{ statusCode: number }> = ({ statusCode }) => {
         <title>{title}</title>
       </Head>
 
-      <div className={styles.container}>
-        <main className={styles.main}>
-          <h1>Error Loading Page</h1>
+      <div
+        className='max-w-xl mx-auto grid place-content-center'
+        style={{ minHeight: "calc(100vh - 500px)" }}
+      >
+        <h1 className='font-bold text-2xl mb-4'>
+          Diese Seite konnte nicht erfolgreich geladen werden
+        </h1>
 
-          {statusCode && <p>Error code: {statusCode}</p>}
+        {statusCode && (
+          <pre className='px-4 py-3 rounded text-gray-600 max-w-full border border-gray-400 bg-gray-100 break-all whitespace-pre-wrap'>
+            Fehlercode: {statusCode}
+          </pre>
+        )}
 
-          <img src='/error.png' alt='Error' className={styles.errorImage} />
-        </main>
+        <Link href='/'>
+          <a className='underline block mt-6'>Zur Startseite</a>
+        </Link>
       </div>
     </>
   );
