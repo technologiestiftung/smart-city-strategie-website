@@ -8,12 +8,11 @@ import {
 } from "react-notion-x";
 import { PageProps } from "@utils/types";
 import Head from "./Head";
-import { CustomHtml } from "./CustomHtml";
 import { Page404 } from "./Page404";
 import { Layout } from "./Layout";
 import { LoadingIcon } from "./LoadingIcon";
-import { Link } from "./Link";
 import { getBlockTitle } from "notion-utils";
+import { PageLink } from "./Link";
 
 const Modal = dynamic(
   () => import("react-notion-x").then(notion => notion.Modal),
@@ -65,7 +64,7 @@ export const NotionPage: React.FC<PageProps> = ({
       />
       <NotionRenderer
         components={{
-          pageLink: Link,
+          pageLink: PageLink,
           code: Code,
           collection: Collection,
           collectionRow: CollectionRow,
@@ -74,9 +73,8 @@ export const NotionPage: React.FC<PageProps> = ({
         }}
         recordMap={recordMap}
         showCollectionViewDropdown={false}
-        rootPageId='bec3fb01ae3b4d33bd2c1582fc1eb06f'
+        rootPageId={site.rootNotionPageId}
       />
-      <CustomHtml site={site} />
     </Layout>
   );
 };

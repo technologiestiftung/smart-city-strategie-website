@@ -7,7 +7,7 @@
 
 import { parsePageId } from "notion-utils";
 import { getSiteConfig, getEnv } from "./get-config-value";
-import { PageUrlOverridesMap, PageUrlOverridesInverseMap } from "./types";
+import { PageUrlOverridesMap } from "./types";
 
 export const rootNotionPageId: string = parsePageId(
   getSiteConfig("rootNotionPageId"),
@@ -28,8 +28,6 @@ export const pageUrlOverrides = cleanPageUrlMap(
   getSiteConfig("pageUrlOverrides", {}) || {},
   "pageUrlOverrides"
 );
-
-export const inversePageUrlOverrides = invertPageUrlOverrides(pageUrlOverrides);
 
 export const pageUrlAdditions = cleanPageUrlMap(
   getSiteConfig("pageUrlAdditions", {}) || {},
@@ -125,19 +123,6 @@ function cleanPageUrlMap(
     return {
       ...acc,
       [path]: uuid,
-    };
-  }, {});
-}
-
-function invertPageUrlOverrides(
-  pageUrlOverrides: PageUrlOverridesMap
-): PageUrlOverridesInverseMap {
-  return Object.keys(pageUrlOverrides).reduce((acc, uri) => {
-    const pageId = pageUrlOverrides[uri];
-
-    return {
-      ...acc,
-      [pageId]: uri,
     };
   }, {});
 }

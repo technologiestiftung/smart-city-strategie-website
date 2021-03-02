@@ -1,18 +1,20 @@
 import React, { FC } from "react";
-import { domain } from "@utils/config";
+import { domain, rootNotionPageId } from "@utils/config";
 import { resolveNotionPage } from "@utils/resolve-notion-page";
 import { NotionPage } from "@components/NotionPage";
 import { PageProps } from "@utils/types";
 
 export const getStaticProps = async (): Promise<{
-  props?: Record<string, unknown>;
+  props?: PageProps;
   revalidate?: number;
   redirect?: {
     destination: string;
   };
 }> => {
   try {
-    const props = await resolveNotionPage(domain);
+    console.log("FETCHING PAGE:", rootNotionPageId);
+    const props = await resolveNotionPage(domain, rootNotionPageId);
+    console.log("PAGE FETCHED:", props);
 
     return { props, revalidate: 10 };
   } catch (err) {
@@ -21,6 +23,9 @@ export const getStaticProps = async (): Promise<{
   }
 };
 
-const NotionDomainPage: FC<PageProps> = props => <NotionPage {...props} />;
+const NotionDomainPage: FC<PageProps> = props => {
+  console.log(props);
+  return <NotionPage {...props} />;
+};
 
 export default NotionDomainPage;

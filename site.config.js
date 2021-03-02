@@ -29,7 +29,7 @@ module.exports = {
   //   '/foo': '067dd719a912471ea9a3ac10710e7fdf',
   //   '/bar': '0be6efce9daf42688f65c76b89f8eb27'
   // }
-  pageUrlOverrides: {
+  pageUrlAdditions: {
     '/prozesstermine': 'd4d81055b9ae4666a0091509afbbecbd',
     '/prozessergebnisse': '14516fd43b7d402b94ac0dccd7567462',
     '/smart-city-strategiebeirat-rollenbeschreibung': 'b119cbeb246e4f5c99adaf2eeb85a173',

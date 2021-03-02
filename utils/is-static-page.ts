@@ -24,7 +24,7 @@ export const staticPagesMap = {
 };
 
 export const isStaticPage = (pageId: string): boolean =>
-  Object.values(staticPagesMap).includes(pageId);
+  Object.values(staticPagesMap).includes(pageId.replace(/^\//, ""));
 
 export const getSlugById = (pageId: string): string | undefined =>
   Object.keys(staticPagesMap).find((key: string) => {
