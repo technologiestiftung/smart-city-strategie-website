@@ -1,9 +1,10 @@
 import React, { FC } from "react";
 import { domain, isDev } from "@utils/config";
-import { getSiteMaps } from "@utils/get-site-maps";
+// import { getSiteMaps } from "@utils/get-site-maps";
 import { resolveNotionPage } from "@utils/resolve-notion-page";
 import { NotionPage } from "@components/NotionPage";
 import { PageProps } from "@utils/types";
+import { getStaticPagesPaths } from "@utils/is-static-page";
 
 interface ContextType {
   params: {
@@ -58,17 +59,17 @@ export async function getStaticPaths(): Promise<{
     };
   }
 
-  const siteMaps = await getSiteMaps();
+  // const siteMaps = await getSiteMaps();
 
   const ret = {
-    paths: siteMaps.flatMap(siteMap =>
-      Object.keys(siteMap.canonicalPageMap).map(pageId => ({
-        params: {
-          pageId,
-        },
-      }))
-    ),
-    // paths: [],
+    // paths: siteMaps.flatMap(siteMap =>
+    //   Object.keys(siteMap.canonicalPageMap).map(pageId => ({
+    //     params: {
+    //       pageId,
+    //     },
+    //   }))
+    // ),
+    paths: getStaticPagesPaths(),
     fallback: true,
   };
 

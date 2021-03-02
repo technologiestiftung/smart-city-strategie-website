@@ -1,5 +1,3 @@
-import { FC } from "react";
-import Link from "next/link";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import {
@@ -14,6 +12,7 @@ import { CustomHtml } from "./CustomHtml";
 import { Page404 } from "./Page404";
 import { Layout } from "./Layout";
 import { LoadingIcon } from "./LoadingIcon";
+import { Link } from "./Link";
 import { getBlockTitle } from "notion-utils";
 
 const Modal = dynamic(
@@ -25,41 +24,6 @@ const Pdf = dynamic(async () => {
   const notion = await import("react-notion-x");
   return notion.Pdf;
 });
-
-const PageLink: FC<{
-  href: string;
-  as: string;
-  passHref: boolean;
-  prefetch: boolean;
-  replace: boolean;
-  scroll: boolean;
-  shallow: boolean;
-  locale: string;
-}> = ({
-  href,
-  as,
-  passHref,
-  prefetch,
-  replace,
-  scroll,
-  shallow,
-  locale,
-  ...props
-}) => (
-  <Link
-    href={href}
-    as={as}
-    passHref={passHref}
-    prefetch={prefetch}
-    replace={replace}
-    scroll={scroll}
-    shallow={shallow}
-    locale={locale}
-  >
-    {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
-    <a {...props} />
-  </Link>
-);
 
 export const NotionPage: React.FC<PageProps> = ({
   site,
@@ -101,7 +65,7 @@ export const NotionPage: React.FC<PageProps> = ({
       />
       <NotionRenderer
         components={{
-          pageLink: PageLink,
+          pageLink: Link,
           code: Code,
           collection: Collection,
           collectionRow: CollectionRow,
