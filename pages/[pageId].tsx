@@ -1,5 +1,6 @@
 import React, { FC } from "react";
-import { domain } from "@utils/config";
+import { domain, isDev } from "@utils/config";
+import { getSiteMaps } from "@utils/get-site-maps";
 import { resolveNotionPage } from "@utils/resolve-notion-page";
 import { NotionPage } from "@components/NotionPage";
 import { PageProps } from "@utils/types";
@@ -10,13 +11,14 @@ interface ContextType {
   };
 }
 
-export const getServerSideProps = async (
+export const getStaticProps = async (
   context: ContextType
 ): Promise<{
-  props?: PageProps;
   redirect?: {
     destination: string;
   };
+  revalidate?: number;
+  props?: PageProps;
 }> => {
   const rawPageId = context.params.pageId as string;
 
@@ -31,7 +33,7 @@ export const getServerSideProps = async (
 
     const props = await resolveNotionPage(domain, rawPageId);
 
-    return { props };
+    return { props, revalidate: 10 };
   } catch (err) {
     console.error("page error", domain, rawPageId, err);
 
@@ -40,6 +42,39 @@ export const getServerSideProps = async (
     throw err;
   }
 };
+
+export async function getStaticPaths(): Promise<{
+  paths: Array<{
+    params: {
+      pageId: string;
+    };
+  }>;
+  fallback: boolean;
+}> {
+  if (isDev) {
+    return {
+      paths: [],
+      fallback: true,
+    };
+  }
+
+  const siteMaps = await getSiteMaps();
+
+  const ret = {
+    paths: siteMaps.flatMap(siteMap =>
+      Object.keys(siteMap.canonicalPageMap).map(pageId => ({
+        params: {
+          pageId,
+        },
+      }))
+    ),
+    // paths: [],
+    fallback: true,
+  };
+
+  console.log(ret.paths);
+  return ret;
+}
 
 const NotionDomainDynamicPage: FC<PageProps> = props => (
   <NotionPage {...props} />
