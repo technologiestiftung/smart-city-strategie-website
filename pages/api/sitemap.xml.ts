@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { host } from "@utils/config";
+import { staticPagesMap } from "@utils/is-static-page";
 
 export default async (
   req: NextApiRequest,
@@ -28,5 +29,17 @@ const createSitemap = (): string => `<?xml version="1.0" encoding="UTF-8"?>
       <url>
         <loc>${host}/</loc>
       </url>
+
+
+      ${Object.keys(staticPagesMap)
+        .map(canonicalPagePath =>
+          `
+            <url>
+              <loc>${host}/${canonicalPagePath}</loc>
+            </url>
+          `.trim()
+        )
+        .join("")}
+
     </urlset>
     `;
