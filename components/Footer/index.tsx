@@ -8,6 +8,20 @@ const currentYear = new Date().getFullYear();
 export const Footer: FC = () => (
   <div className='container px-8 py-8 mx-auto bg-white max-w-screen-lg'>
     <div className=' mt-8 border-b border-gray-300 py-8'>
+      <div className='inline-flex items-center'>
+        <a href='https://www.citylab-berlin.org/'>
+          <CityLabLogo />
+          <span
+            className='block pl-12 leading-tight text-gray-500 w-full'
+            style={{ maxWidth: "28rem" }}
+          >
+            Der Smart City-Strategieprozess und diese Wissens&shy;datenbank
+            werden koordiniert vom CityLAB Berlin
+          </span>
+        </a>
+      </div>
+    </div>
+    <div className=' mt-4 border-b border-gray-300 py-8'>
       <div
         className='inline-grid grid-flow-row-dense items-stretch gap-4 md:grid-flow-col-dense grid-cols-2 sm:grid-cols-4 md:grid-cols-none'
         style={{
@@ -57,11 +71,6 @@ export const Footer: FC = () => (
             height='33'
             objectFit='contain'
           />
-        </div>
-        <div className='inline-flex border-l border-gray-300 pl-4 items-center'>
-          <a href='https://www.citylab-berlin.org/'>
-            <CityLabLogo />
-          </a>
         </div>
       </div>
     </div>

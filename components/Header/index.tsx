@@ -52,14 +52,14 @@ export const Header: FC<{ title?: string }> = ({ title = "" }) => {
               quality='60'
             />
             <div
-              className='absolute bottom-0 left-0 w-screen py-12 text-white h-2/4 grid content-end'
+              className='absolute bottom-0 left-0 leading-tight w-screen py-6 sm:py-12 text-white h-2/4 grid content-end'
               style={{
                 background:
                   "linear-gradient(0deg, rgba(229,99,124,.5) 0%, transparent 100%)",
                 mixBlendMode: "screen",
               }}
             >
-              <h1 className='px-4 container mx-auto max-w-screen-lg text-7xl'>
+              <h1 className='px-4 container mx-auto max-w-screen-lg text-4xl sm:text-7xl'>
                 {title}
               </h1>
             </div>
