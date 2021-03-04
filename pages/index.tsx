@@ -6,7 +6,6 @@ import { PageProps } from "@utils/types";
 
 export const getStaticProps = async (): Promise<{
   props?: PageProps;
-  revalidate?: number;
   redirect?: {
     destination: string;
   };
@@ -16,7 +15,7 @@ export const getStaticProps = async (): Promise<{
     const props = await resolveNotionPage(domain, rootNotionPageId);
     console.log("PAGE FETCHED:", props);
 
-    return { props, revalidate: 10 };
+    return { props };
   } catch (err) {
     console.error("page error", domain, err);
     throw err;

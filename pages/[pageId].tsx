@@ -17,7 +17,6 @@ export const getStaticProps = async (
   redirect?: {
     destination: string;
   };
-  revalidate?: number;
   props?: PageProps;
 }> => {
   const rawPageId = context.params.pageId as string;
@@ -33,7 +32,7 @@ export const getStaticProps = async (
 
     const props = await resolveNotionPage(domain, rawPageId);
 
-    return { props, revalidate: 10 };
+    return { props };
   } catch (err) {
     console.error("page error", domain, rawPageId, err);
 
