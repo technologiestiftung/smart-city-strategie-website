@@ -32,7 +32,7 @@ export const Footer: FC = () => (
           <SmartCityLogo />
         </div>
         <div
-          className='inline-flex border-l border-gray-300 pl-4'
+          className='inline-flex sm:border-l border-gray-300 sm:pl-4'
           style={{
             height: 73,
           }}
@@ -45,7 +45,7 @@ export const Footer: FC = () => (
             objectFit='contain'
           />
         </div>
-        <div className='inline-flex border-l border-gray-300 pl-4'>
+        <div className='inline-flex sm:border-l border-gray-300 sm:pl-4'>
           <Image
             src='/02_RBm_SKzl-01_i4zgwy.png'
             alt='Logo Berlin Regierende Buergermeister von Berlin'
@@ -54,7 +54,7 @@ export const Footer: FC = () => (
             objectFit='contain'
           />
         </div>
-        <div className='inline-flex border-l border-gray-300 pl-4'>
+        <div className='inline-flex sm:border-l border-gray-300 sm:pl-4'>
           <Image
             src='/03_sen_wienbe_logo-01_ctse97.png'
             alt='Logo Berlin Senatsverwaltung fuer Wirtschaft, Energie und Betriebe'
@@ -63,7 +63,7 @@ export const Footer: FC = () => (
             objectFit='contain'
           />
         </div>
-        <div className='inline-flex border-l border-gray-300 pl-4'>
+        <div className='inline-flex sm:border-l border-gray-300 sm:pl-4'>
           <Image
             src='/eu-logo_wqrkgx.png'
             alt='Logo Europaeische Union - Fonds fuer regionaler Entwicklung'
@@ -80,14 +80,14 @@ export const Footer: FC = () => (
         <a
           href='https://www.citylab-berlin.org/legalnote'
           title='Smart City Impressum'
-          className='pl-4 border-l border-black hover:text-red-500 transition-colors'
+          className='pl-4 sm:border-l border-black hover:text-red-500 transition-colors'
         >
           Impressum
         </a>
         <a
           href='https://www.citylab-berlin.org/dataprivacy'
           title='Smart City Datenschutzrichtlinien'
-          className='pl-4 border-l border-black hover:text-red-500 transition-colors'
+          className='pl-4 sm:border-l border-black hover:text-red-500 transition-colors'
         >
           Datenschutz
         </a>
