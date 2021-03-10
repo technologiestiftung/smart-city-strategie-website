@@ -44,7 +44,7 @@ export const Header: FC<{ title?: string }> = ({ title = "" }) => {
         {isHome && (
           <>
             <Image
-              src='/smart-city-header-cover_zn34yh.jpg'
+              src='/smart-city-header-cover.jpg'
               width='1920'
               height='680'
               layout='responsive'

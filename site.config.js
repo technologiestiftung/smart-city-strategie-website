@@ -8,7 +8,7 @@ module.exports = {
 
   // basic site info (required)
   name: 'Smart City Berlin - Strategieprozess - Öffentlicher Wissensspeicher',
-  domain: 'smart-city-strategie.netlify.app',
+  domain: 'smart-city-strategie-website.vercel.app',
   author: 'CityLAB Berlin',
 
   // default notion icon and cover images for site-wide consistency (optional)

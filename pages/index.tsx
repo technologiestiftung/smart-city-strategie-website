@@ -12,14 +12,14 @@ export const getStaticProps = async (): Promise<{
   };
 }> => {
   try {
-    console.log("FETCHING PAGE:", rootNotionPageId);
+    console.log("FETCHING PAGE:", rootNotionPageId, domain);
     const props = await resolveNotionPage(domain, rootNotionPageId);
     console.log("PAGE FETCHED:", props);
 
     return { props, revalidate: 60 * 60 };
   } catch (err) {
-    console.error("page error", domain, err);
-    throw err;
+    console.error("page error", rootNotionPageId, domain, err.message);
+    throw new Error(err);
   }
 };
 
