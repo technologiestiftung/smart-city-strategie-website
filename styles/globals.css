@@ -68,12 +68,21 @@
 	  @apply font-sans;
   }
 
+  .notion-page {
+    width: 100%;
+    margin: 0;
+  }
+
   .notion-page-title-text,
   .notion-page-title,
   .notion-link {
 	  border-bottom: 0;
     white-space: normal;
     text-decoration: underline;
+  }
+
+  .notion-page-title-icon {
+    display: inline-flex;
   }
 
   .notion-page-title,
