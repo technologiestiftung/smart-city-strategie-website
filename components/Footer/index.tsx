@@ -8,13 +8,36 @@ const currentYear = new Date().getFullYear();
 export const Footer: FC = () => (
   <div className='container px-8 py-8 mx-auto bg-white max-w-screen-lg'>
     <div className=' mt-8 border-b border-gray-300 py-8'>
-      <div className='inline-flex items-center'>
+      <div className='flex gap-12 flex-wrap'>
         <a href='https://www.citylab-berlin.org/'>
           <span className='block pl-12 leading-tight text-gray-500 w-full'>
             Bereitgestellt vom
           </span>
           <CityLabLogo />
         </a>
+        <span>
+          <span className='block pb-3 leading-tight text-gray-500 w-full'>
+            Gefördert durch
+          </span>
+          <a href='https://www.bmi.bund.de/' className='mr-4'>
+            <Image
+              src='/partner-logos/Logo-BMI.png'
+              alt='Logo des Bundesministerium des Innern, für Bau und Heimat'
+              width='100'
+              height='50'
+              objectFit='contain'
+            />
+          </a>
+          <a href='https://www.kfw.de/'>
+            <Image
+              src='/partner-logos/Logo-KfW.png'
+              alt='Logo des KfW, Frankfurt am Main'
+              width='100'
+              height='50'
+              objectFit='contain'
+            />
+          </a>
+        </span>
       </div>
     </div>
     <div className=' mt-4 border-b border-gray-300 py-8'>
