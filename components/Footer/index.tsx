@@ -10,14 +10,10 @@ export const Footer: FC = () => (
     <div className=' mt-8 border-b border-gray-300 py-8'>
       <div className='inline-flex items-center'>
         <a href='https://www.citylab-berlin.org/'>
-          <CityLabLogo />
-          <span
-            className='block pl-12 leading-tight text-gray-500 w-full'
-            style={{ maxWidth: "28rem" }}
-          >
-            Der Smart City-Strategieprozess und diese Wissens&shy;datenbank
-            werden koordiniert vom CityLAB Berlin
+          <span className='block pl-12 leading-tight text-gray-500 w-full'>
+            Bereitgestellt vom
           </span>
+          <CityLabLogo />
         </a>
       </div>
     </div>
