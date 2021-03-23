@@ -13,19 +13,19 @@
     "type-check": "tsc --project tsconfig.json --pretty --noEmit"
   },
   "dependencies": {
-    "autoprefixer": "10.1.0",
+    "autoprefixer": "10.2.5",
     "dangerously-set-html-content": "1.0.8",
-    "next": "10.0.6",
+    "next": "10.0.9",
     "notion-client": "4.3.2",
-    "notion-utils": "4.2.20",
+    "notion-utils": "4.3.0",
     "p-map": "4.0.0",
-    "p-memoize": "4.0.0",
-    "postcss": "8.1.7",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "react-notion-x": "4.3.3",
+    "p-memoize": "4.0.1",
+    "postcss": "8.2.8",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-notion-x": "4.3.7",
     "react-tweet-embed": "1.2.2",
-    "tailwindcss": "2.0.2"
+    "tailwindcss": "2.0.4"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "5.11.9",
