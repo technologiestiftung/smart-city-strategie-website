@@ -34,7 +34,7 @@ export const Header: FC<{ title?: string }> = ({ title = "" }) => {
               "underline text-gray-500 hover:text-gray-800 transition-colors",
             ].join(" ")}
           >
-            <div className='sm:w-40 pt-2'>
+            <div className='pt-2'>
               <SmartCityLogo />
             </div>
           </span>
