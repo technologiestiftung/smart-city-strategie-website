@@ -1,8 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-# Notion as CMS example
-This repository serves a demonstration purpose only.
-It tests and demonstrates how to use [Notion.so](https://www.notion.so/) as a CMS for a [Next.js](https://nextjs.org/) Website.
+# Smart City Strategy
+Repository of the public knowledge website for the development of Berlin's Smart City Strategy: [strategie.smart-city-berlin.de](https://strategie.smart-city-berlin.de)
+It uses [Notion.so](https://www.notion.so/) as a CMS for a [Next.js](https://nextjs.org/) Website.
 
 ## Stack
 - Written in [TypeScript](https://www.typescriptlang.org/)
