@@ -13,27 +13,28 @@
     "type-check": "tsc --project tsconfig.json --pretty --noEmit"
   },
   "dependencies": {
-    "autoprefixer": "10.2.5",
+    "@socialgouv/matomo-next": "1.2.2",
+    "autoprefixer": "10.3.1",
     "dangerously-set-html-content": "1.0.8",
-    "next": "10.0.9",
-    "notion-client": "4.3.2",
-    "notion-utils": "4.3.0",
+    "next": "10.2.3",
+    "notion-client": "4.7.9",
+    "notion-utils": "4.7.9",
     "p-map": "4.0.0",
     "p-memoize": "4.0.1",
     "postcss": "8.2.10",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-notion-x": "4.3.7",
+    "react-notion-x": "4.7.9",
     "react-tweet-embed": "1.2.2",
-    "tailwindcss": "2.0.4"
+    "tailwindcss": "2.2.4"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "5.13.0",
+    "@testing-library/jest-dom": "5.14.1",
     "@testing-library/react": "11.2.7",
-    "@types/node": "14.17.2",
-    "@types/react": "17.0.9",
-    "@typescript-eslint/eslint-plugin": "4.26.0",
-    "@typescript-eslint/parser": "4.26.0",
+    "@types/node": "14.17.5",
+    "@types/react": "17.0.14",
+    "@typescript-eslint/eslint-plugin": "4.28.3",
+    "@typescript-eslint/parser": "4.28.3",
     "babel-jest": "26.6.3",
     "commitizen": "4.2.4",
     "cz-conventional-changelog": "3.3.0",
@@ -48,9 +49,9 @@
     "husky": "4.3.8",
     "jest": "26.6.3",
     "lint-staged": "10.5.4",
-    "notion-types": "4.6.4",
-    "prettier": "2.3.1",
-    "typescript": "4.3.2"
+    "notion-types": "4.7.9",
+    "prettier": "2.3.2",
+    "typescript": "4.3.5"
   },
   "husky": {
     "hooks": {
