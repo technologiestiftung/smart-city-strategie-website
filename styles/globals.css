@@ -76,10 +76,8 @@
   .notion-link .notion-page-title {
 	  border-bottom: 0;
     white-space: normal;
-  }
-
-  .notion-link .notion-page-title {
-    text-decoration: underline;
+    display: inline-block;
+    border: none;
   }
 
   .notion-page-title-icon {
@@ -149,9 +147,13 @@
     }
   }
 
+  .notion-link,
   .notion-page-link {
     height: auto;
     min-height: 30px;
+    border: 0;
+    color: var(--fg-color);
+    opacity: 1;
   }
 
   .notion-page-title {
@@ -190,8 +192,7 @@
     max-width: 100% !important;
   }
 
-  .notion-list-body,
-  .notion-table-cell {
+  .notion-table-cell:hover {
     overflow: visible;
   }
 
