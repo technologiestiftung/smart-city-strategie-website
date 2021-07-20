@@ -8,7 +8,7 @@ module.exports = {
 
   // basic site info (required)
   name: 'Smart City Berlin - Strategieprozess - Öffentlicher Wissensspeicher',
-  domain: 'smart-city-strategie-website.vercel.app',
+  domain: 'strategie.smart-city-berlin.de',
   author: 'CityLAB Berlin',
 
   // default notion icon and cover images for site-wide consistency (optional)

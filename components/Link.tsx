@@ -35,16 +35,17 @@ export const PageLink: FC<LinkProps> = ({
       title='open this notion page in a new tab'
       target='_blank'
       className={[
-        "group relative px-1 py-1 pb-0.5 inline-block border rounded mb-2 hover:bg-gray-100",
+        "group relative px-1 py-1 inline-block border rounded hover:bg-gray-100",
         "transition leading-tight",
       ].join(" ")}
     >
       {children}
       <span
         className={[
-          "absolute bottom-full left-0 max-w-full rounded bg-black text-white bg-opacity-70",
-          "shadow-lg leading-tight px-2 py-1 text-sm transition inline-grid grid-cols-12 items-center justify-items-center",
-          "transform translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:-translate-y-2",
+          "absolute bottom-full left-0 max-w-screen rounded bg-black text-white bg-opacity-70",
+          "shadow-lg leading-tight px-1 py-0.5 text-sm transition inline-grid grid-cols-12 items-center justify-items-center",
+          "transform translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0",
+          "pointer-events-none",
         ].join(" ")}
         style={{ width: 250, willChange: "transform, opacity", zIndex: 101 }}
       >
