@@ -16,7 +16,7 @@
     "@socialgouv/matomo-next": "1.2.2",
     "autoprefixer": "10.3.2",
     "dangerously-set-html-content": "1.0.9",
-    "next": "11.0.1",
+    "next": "11.1.0",
     "notion-client": "4.8.2",
     "notion-utils": "4.8.2",
     "p-map": "5.1.0",
