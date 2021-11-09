@@ -17,7 +17,7 @@
     "autoprefixer": "10.3.3",
     "dangerously-set-html-content": "1.0.9",
     "next": "11.1.1",
-    "notion-client": "4.8.6",
+    "notion-client": "4.9.3",
     "notion-utils": "4.8.6",
     "p-map": "5.1.0",
     "p-memoize": "4.0.1",
