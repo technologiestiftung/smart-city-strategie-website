@@ -50,3 +50,51 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+
+## Content Licencing
+
+Texts and content available as [CC BY](https://creativecommons.org/licenses/by/4.0/de/).
+
+## Credits
+
+<table>
+  <tr>
+    <td>
+      Toghether with <a src="https://citylab-berlin.org/de/start/">
+        <br />
+        <br />
+        <img width="200" src="https://citylab-berlin.org/wp-content/uploads/2021/05/citylab-logo.svg" />
+      </a>
+    </td>
+    <td>
+      A project by <a src="https://www.technologiestiftung-berlin.de/">
+        <br />
+        <br />
+        <img width="150" src="https://citylab-berlin.org/wp-content/uploads/2021/05/tsb.svg" />
+      </a>
+    </td>
+    <td>
+      Supported by <a src="https://www.berlin.de/">
+        <br />
+        <br />
+        <img height="50" src="https://strategie.smart-city-berlin.de/_next/image?url=%2Fpartner-logos%2FLogo-BMI.png&w=256&q=75" />
+        <br />
+        <img height="50" src="https://strategie.smart-city-berlin.de/_next/image?url=%2Fpartner-logos%2FLogo-KfW.png&w=256&q=75" />
+        <img height="25" src="https://strategie.smart-city-berlin.de/_next/image?url=%2Fpartner-logos%2Feu-logo.png&w=256&q=75" />
+        <br />
+        <img height="30" src="https://berlinopensource.de/assets/images/senweb-logo.svg" />
+      </a>
+    </td>
+  </tr>
+</table>
+
