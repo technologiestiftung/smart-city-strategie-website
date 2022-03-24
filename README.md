@@ -1,8 +1,9 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![](https://img.shields.io/badge/Build%20with%20%E2%9D%A4%EF%B8%8F-at%20Technologiesitftung%20Berlin-blue)
 
 # Smart City Strategy
 Repository of the public knowledge website for the development of Berlin's Smart City Strategy: [strategie.smart-city-berlin.de](https://strategie.smart-city-berlin.de)
-It uses [Notion.so](https://www.notion.so/) as a CMS for a [Next.js](https://nextjs.org/) Website.
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). It uses [Notion.so](https://www.notion.so/) as a CMS for a [Next.js](https://nextjs.org/) Website.
 
 ## Stack
 - Written in [TypeScript](https://www.typescriptlang.org/)
