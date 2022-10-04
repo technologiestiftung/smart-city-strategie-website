@@ -16,7 +16,7 @@ export const staticPagesMap = {
   "/smart-city-bibliothek": "9f354b0e8e204a97b1ec4930113e7e80",
   "/smart-city-glossar": "79d472c68ba84a79bceb9afebc1d4590",
   // "/wer-entwickelt-die-strategie": "1237978dad9e48bba137aa11ee3e3d16",
-  "/events-im-netzwerk": "b0d10ad6c8d24bd3858b0860b0d21312",
+  // "/events-im-netzwerk": "b0d10ad6c8d24bd3858b0860b0d21312",
   "/wie-gehen-wir-es-an": "abb29170ca8747e2bc3756f7dbdc0e83",
   "/was-machen-andere-staedte": "dea199fc4db844daade74c55c31683e3",
   "/smart-city-strategieboard": "f3f853b0ae5941b89da9c27b3248d403",
